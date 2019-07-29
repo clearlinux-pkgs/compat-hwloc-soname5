@@ -68,7 +68,6 @@ Configure miss: cuda_runtime_api.h
 Configure miss: nvml.h usability
 Configure miss: nvml.h presence
 Configure miss: nvml.h
-Configure miss: XOpenDisplay in -lX11
 Configure miss: NVCtrl/NVCtrl.h usability
 Configure miss: NVCtrl/NVCtrl.h presence
 Configure miss: NVCtrl/NVCtrl.h
