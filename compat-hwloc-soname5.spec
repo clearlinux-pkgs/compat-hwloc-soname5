@@ -4,7 +4,7 @@
 #
 Name     : compat-hwloc-soname5
 Version  : 1.11.3
-Release  : 4
+Release  : 5
 URL      : https://www.open-mpi.org/software/hwloc/v1.11/downloads/hwloc-1.11.3.tar.gz
 Source0  : https://www.open-mpi.org/software/hwloc/v1.11/downloads/hwloc-1.11.3.tar.gz
 Summary  : Hardware locality detection and management library
@@ -23,6 +23,8 @@ BuildRequires : pkgconfig(ice)
 BuildRequires : pkgconfig(x11)
 BuildRequires : systemd-dev
 BuildRequires : valgrind
+# Suppress generation of debuginfo
+%global debug_package %{nil}
 
 %description
 Introduction
@@ -60,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564437558
+export SOURCE_DATE_EPOCH=1567810163
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -80,7 +82,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1564437558
+export SOURCE_DATE_EPOCH=1567810163
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/compat-hwloc-soname5
 cp COPYING %{buildroot}/usr/share/package-licenses/compat-hwloc-soname5/COPYING
